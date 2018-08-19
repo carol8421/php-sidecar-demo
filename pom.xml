@@ -10,6 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>java-api</module>
+        <module>sidecar</module>
+        <module>eureka-server</module>
     </modules>
 
     <parent>

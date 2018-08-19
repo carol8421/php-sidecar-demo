@@ -1,20 +1,29 @@
 package io.xxweimei.java.api;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @RestController
 public class TestController {
 
-    @GetMapping(value = "/test", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public List<String> test() {
-        List<String> res = new ArrayList<>(2);
-        res.add("this");
-        res.add(" is ");
-        return res;
+    private final TestService testService;
+
+    @Autowired
+    public TestController(TestService testService) {
+        this.testService = testService;
     }
+
+
+    @GetMapping(value = "/java/api/test", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public String javaApiTest() {
+        return "This is java response";
+    }
+
+    @GetMapping(value = "/php/api/test", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public String phpApiTest() {
+        return testService.test();
+    }
+
 }
