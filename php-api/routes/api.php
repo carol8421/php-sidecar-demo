@@ -31,6 +31,6 @@ Route::get('/health', function () {
 
 Route::get('/call_java', function () {
     $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1:7999/java-api/']);
-    $response = $client->request('GET', 'java/api/test');
+    $response = $client->request('GET', 'api/test');
     return $response->getBody();
 });
