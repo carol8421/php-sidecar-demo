@@ -6,4 +6,4 @@
 5. 访问http://localhost:8080/php/api/test，成功通过feign访问php接口
 
 # 简单介绍下调用流程
-> 请求java-api的/php/api/test接口
+> TODO
