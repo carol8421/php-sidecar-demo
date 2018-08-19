@@ -8,12 +8,12 @@
 
 # 服务清单
 
-| 应用名称 | 端口 |
-|----| ---- |
-| eureka | 8761 |
-| java-api | 8080 |
-| php-api | 8000 |
-| sidecar | 7999 |
+| 应用名称 | 端口 | 语言 |
+|----| ---- | ---- |
+| eureka | 8761 | java |
+| java-api | 8080 | java |
+| php-api | 8000 | php |
+| sidecar | 7999 | java |
 
 # 简单介绍下调用流程
 > TODO
