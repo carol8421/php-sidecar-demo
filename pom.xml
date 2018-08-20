@@ -12,6 +12,7 @@
         <module>java-api</module>
         <module>sidecar</module>
         <module>eureka-server</module>
+        <module>zuul-gateway</module>
     </modules>
 
     <parent>
